@@ -86,7 +86,7 @@ def main():
     # read input
     _input = sys.stdin.readlines()
 
-    # sting variable for output csv
+    # string variable for output csv
     # assuming no utf-8 encoding errors in header line
     output = _input[0]
 
@@ -133,7 +133,7 @@ def main():
         timestamp = datetime.datetime.strptime(timestamp, '%m/%d/%y %I:%M:%S %p')
         log.debug('pacific time was ' + timestamp.isoformat())
         
-        # convert to pacific timezone
+        # convert to eastern timezone
         timestamp += datetime.timedelta(hours=3)
         log.debug('eastern time is ' + timestamp.isoformat())
 
